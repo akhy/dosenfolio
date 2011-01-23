@@ -1,0 +1,4 @@
+- image resizer
+- gravatar
+- rss / blog reader
+- bilingual
