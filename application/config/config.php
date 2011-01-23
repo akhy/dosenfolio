@@ -11,8 +11,8 @@
 |	http://example.com/
 |
 */
-$config['base_url']	= "http://example.com/";
-
+$config['base_url']	= "http://localhost/dosen2";
+define('MY_URL', $config['base_url']);
 /*
 |--------------------------------------------------------------------------
 | Index File
@@ -23,7 +23,7 @@ $config['base_url']	= "http://example.com/";
 | variable so that it is blank.
 |
 */
-$config['index_page'] = "index.php";
+$config['index_page'] = "";
 
 /*
 |--------------------------------------------------------------------------

@@ -37,5 +37,10 @@ define('FOPEN_WRITE_CREATE_STRICT', 			'xb');
 define('FOPEN_READ_WRITE_CREATE_STRICT',		'x+b');
 
 
+define('ADM_URL',		'admin');
+define('FOTO_URL',		'foto/');
+
+
+
 /* End of file constants.php */
 /* Location: ./system/application/config/constants.php */
