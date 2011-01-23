@@ -1,0 +1,3 @@
+RewriteEngine on
+RewriteCond $1 !^(index\.php|images|robots\.txt|css|js|foto|images)
+RewriteRule ^(.*)$ /dosen2/index.php/$1 [L]

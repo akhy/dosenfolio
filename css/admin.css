@@ -1,0 +1,264 @@
+
+
+
+html{
+	background: black url('../images/background.jpg') no-repeat top center;
+	font-family: Lucida Grande, Verdana, Sans-serif;
+	font-size: 14px;
+	color: #4F5155;
+}
+body{
+	background: #FFFFFF url('../images/login.png') repeat-x bottom center;
+	margin: 0 auto 20px ;
+	padding: 20px 20px;
+	width: 600px;
+	min-height: 300px;
+	font-size: 90%;
+	-moz-border-radius: 0 0 20px 20px;
+	-moz-box-shadow: 0 0 10px white;
+	-webkit-border-radius: 0 0 20px 20px;
+	-webkit-box-shadow: 0 0 10px white;
+}
+
+
+a {
+ color: #003399;
+ background-color: transparent;
+ font-weight: normal;
+}
+
+h1, h2 {
+	clear: both;
+ background-color: transparent;
+ border-bottom: 1px solid #D0D0D0;
+}
+h2{
+	margin: 3em auto 0.5em;
+
+	text-align: center;
+	clear: right;
+	color: white;
+	background-color: #666666;
+	font-size: 14px;
+	padding: 0.5em 0;
+	text-transform: uppercase;
+}
+code {
+ font-family: Monaco, Verdana, Sans-serif;
+ font-size: 12px;
+ background-color: #f9f9f9;
+ border: 1px solid #D0D0D0;
+ color: #002166;
+ display: block;
+ margin: 14px 0 14px 0;
+ padding: 12px 10px 12px 10px;
+}
+
+.entity{
+	padding: 15px 0;
+	margin: 0 0 15px;
+	border-bottom: 2px solid gray;
+}
+	.entity .button{
+		display: block;
+		text-align: center;
+		margin: 0 auto;
+	}
+	.entity form{
+		margin-top: 0;
+	}
+	
+label, input, textarea, select{
+	display: block;
+}
+
+label{
+	font-weight: bold;
+	margin-top: 5px;
+}
+textarea{
+	width: 200px;
+	height: 60px;
+}
+blockquote{
+	padding-left: 1em;
+	margin-left: 1em;
+	border-left: 2px solid #ddd;
+}
+ul li{
+	list-style: none;
+}
+
+div.info,
+div.alert
+{
+	color: #555;
+ 	margin: 10px 0 5px 0;
+ 	padding: 10px;
+	font-size: x-small;
+}
+
+div.info{
+	background: #FBF2E6;
+	border: 1px solid #E6E68F;
+ }
+div.alert{
+	background: #FBE6F2;
+	border: 1px solid #E68F8F;
+}
+.gray{
+	color: #ccc;
+}
+.smaller{
+	font-size: 80%;
+}
+
+.nav#top{
+	background: #666 url('../images/strip.jpg') repeat;
+	color: white;
+	padding: 10px;
+	border-bottom: 1px solid #CCCCCC;
+}
+.nav#top #menubar a{
+	display: inline-block;
+	padding: 7px;
+	margin-right: 5px; 
+	background-color: #888;
+	background-color: rgba(153, 153, 153, 0.6);
+	color: white;
+	font-size: 12px;
+	text-decoration:none;
+	font-weight: bold;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+.nav#top #menubar a:hover{
+	background-color: #999;
+	-moz-box-shadow: 0px 0px 5px white;
+	-webkit-box-shadow: 0px 0px 5px white;
+}
+.nav#top cite{
+	display: block;
+	font-size: x-small;
+	font-style: normal;
+	margin: 1em 0 0;
+}
+	.nav#top cite a{
+		color: inherit;
+	}
+.nav#top img{
+	float: right;
+	margin-left: 20px;
+	padding: 2px;
+	background-color: white;
+	border: 1px solid gray;
+}
+#menu-top, #menu-bottom{
+	width: 600px;
+	height: 10px;
+}
+#menu-top { background: url('../images/menu-top.png') no-repeat top center; }
+#menu-bottom { background: url('../images/menu-bottom.png') no-repeat top center; 	margin-bottom: 20px;}
+
+ul, ol{
+	padding-left: 1em;
+}
+
+a img{
+	border: none;
+}
+img.crud{
+	height: 1em;
+}
+
+.button, 
+input[type="submit"]{
+	display: inline-block;
+	cursor: pointer;
+	padding: 5px 10px;
+	font-size: 10px;
+	font-weight: bold;
+	text-decoration: none;
+	color: white;
+	background:#00CCFF url('../images/button.png') repeat-x bottom center;
+	border: 1px solid #0099FF;
+	margin: 3px 0;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+}
+.button:hover,
+input[type="submit"]:hover{
+	background-image: none;
+	background-color:#0BE;
+}
+.button:active,
+input[type="submit"]:active{
+	background-color:#09D;
+}
+
+.button.gray{
+	color: #555;
+	background: #ddd;
+	border: none;
+	-moz-border-radius: 0;
+	-webkit-border-radius: 0;
+} /*url('../images/button.png') */
+
+.button.gray:hover{
+	color: white;
+	background-color:#0BE;
+}
+.button.gray:active{
+	background-color:#09D;
+}
+
+
+form, ul, .data{
+	border: 1px solid #ddd;
+	padding: 1.5em;
+	margin: 1em auto;
+}
+
+form{
+	clear: both;
+	background: #fafafa url('../images/form.png') repeat-x bottom center;
+}
+ul {
+
+}
+form h3{
+	margin: 0 0 1em;
+}
+
+.big.avatar{
+	-moz-box-shadow: 5px 5px 10px rgba(0,0,0, 0.1);
+	position: relative;
+	
+}
+
+table{
+	width: 100%;
+}
+	table td{
+		vertical-align:top;
+	}
+	
+tr{
+	
+}
+
+table.my th, 
+table.my td{
+	padding: 0.3em 1em;
+	font-size: 90%;
+}
+table.my th{
+	text-align: left;
+	background-color: #eee;
+}
+table.my td{
+border-bottom: 1px dotted gray;
+}
+table.my tr:last-child td{
+border-bottom: none;
+}

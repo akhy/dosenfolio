@@ -1,0 +1,75 @@
+/* CSS Document */
+
+html{
+	background-color: #444;
+}
+body{
+	background: white url('../images/login.png') repeat-x bottom center;
+	margin: 30px auto;
+	width: 300px;
+	padding: 20px;
+	-moz-border-radius: 30px;
+	-webkit-border-radius: 30px;
+}
+input, label{
+	text-align: center;
+	width: auto;
+	display: block;
+	margin: 0 auto;
+	-moz-border-radius: 5px !important; 
+	-webkit-border-radius: 5px !important;	
+}
+
+input{
+	margin-bottom: 15px;
+}
+h1{
+	font-family: Geneva, Arial, Helvetica, sans-serif;
+	text-align: center;
+	font-size: 12px;
+	font-weight: bold;
+}
+
+div.info,
+div.alert
+{
+	color: #555;
+ 	margin: 10px 0 5px 0;
+ 	padding: 10px;
+	font-size: x-small;
+}
+
+div.info{
+	background: #FBF2E6;
+	border: 1px solid #E6E68F;
+ }
+div.alert{
+	background: #FBE6F2;
+	border: 1px solid #E68F8F;
+}
+
+
+.button, 
+input[type="submit"]{
+	margin: 0 auto !important;
+	display: block !important;
+	cursor: pointer;
+	padding: 5px 10px;
+	font-size: 10px;
+	font-weight: bold;
+	color: white;
+	background:#00CCFF url('../images/button.png') repeat-x bottom center;
+	border: 1px solid #0099FF;
+	margin: 3px 0;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+}
+.button:hover,
+input[type="submit"]:hover{
+	background-image: none;
+	background-color:#0BE;
+}
+.button:active,
+input[type="submit"]:active{
+	background-color:#09D;
+}
