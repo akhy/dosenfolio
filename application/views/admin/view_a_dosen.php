@@ -234,7 +234,78 @@ if (! $this->Otoritas->isAdmin())
 	$this->load->view(ADM_URL . '/form_bimbingan_add', $data);
 	echo '</div>';
 	//---------------------------------------------------------------------------------------------
+	
+	// list publikasi
+	echo '<h2 id="publikasi">' . 'Publikasi di Jurnal Ilmiah' . '</h2>';
+	if ($this->Publikasi->count('dosen_id', $dosen->dosen_id) > 0)
+	{
+		$publikasis = $this->Publikasi->get_where('dosen_id', $dosen->dosen_id, NULL, FALSE, 'tahun');
+				
+		$this->table->clear();
+		$this->table->set_heading('Judul Penelitian', 'Tahun', 'Posisi Penulis', 'Jurnal', 'Jenis', '');
+		foreach($publikasis as $publikasi)
+		{
+			$jenis = '-';			
+			$jenis = ($publikasi->jenis % 3 == 1) ? 'Jurnal Ilmiah Internasional' : $jenis;
+			$jenis = ($publikasi->jenis % 3 == 2) ? 'Jurnal Ilmiah Terakreditasi' : $jenis;
+			$jenis = ($publikasi->jenis % 3 == 0) ? 'Jurnal Ilmiah Tak Terakreditasi' : $jenis;
+			$jenis = ($publikasi->jenis == 0) ? '-' : $jenis;
+			
+			$crud_link = anchor(ADM_URL . '/publikasi/delete/' . $publikasi->publikasi_id, 
+				img(array('src' => 'images/crud_delete.png', 'alt' => '(hapus)', 'class' => 'crud', 
+				'onclick' => 'return confirm(\'Yakin akan menghapus data ini?\')'))) . ' ' .
+				anchor(ADM_URL . '/publikasi/edit/' . $publikasi->publikasi_id, 
+				img(array('src' => 'images/crud_edit.png', 'alt' => '(edit)', 'class' => 'crud'))) . ' '; 
+			
+			$this->table->add_row($publikasi->judul, $publikasi->tahun, $publikasi->posisi, $publikasi->media, $jenis, $crud_link);
+		}
+		echo $this->table->generate(); 
+	}
+	else
+	{
+		echo '<div class="info">' . "Belum ada publikasi di jurnal ilmiah ditambahkan" . '</div>';
+	}
+	echo "<span class='button gray' onclick='show(" . '"publikasi"' . ", $id)' >Tambahkan</span>";
+	echo "<div id='publikasi_$id' class='form'>";
+	$this->load->view(ADM_URL . '/form_publikasi_add', $data);
+	echo '</div>';
+	//---------------------------------------------------------------------------------------------
 
+
+	// list seminar
+	echo '<h2 id="seminar">' . 'Karya Ilmiah di Seminar' . '</h2>';
+	if ($this->Seminar->count('dosen_id', $dosen->dosen_id) > 0)
+	{
+		$seminars = $this->Seminar->get_where('dosen_id', $dosen->dosen_id, NULL, FALSE, 'tahun');
+				
+		$this->table->clear();
+		$this->table->set_heading('Judul Karya Ilmiah', 'Tahun', 'Seminar', 'Jenis', '');
+		foreach($seminars as $seminar)
+		{
+			$jenis = '-';			
+			$jenis = ($seminar->jenis % 2 == 1) ? 'Seminar Internasional' : $jenis;
+			$jenis = ($seminar->jenis % 2 == 0) ? 'Seminar Nasional' : $jenis;
+			$jenis = ($seminar->jenis == 0) ? '-' : $jenis;
+			
+			$crud_link = anchor(ADM_URL . '/seminar/delete/' . $seminar->seminar_id, 
+				img(array('src' => 'images/crud_delete.png', 'alt' => '(hapus)', 'class' => 'crud', 
+				'onclick' => 'return confirm(\'Yakin akan menghapus data ini?\')'))) . ' ' .
+				anchor(ADM_URL . '/seminar/edit/' . $seminar->seminar_id, 
+				img(array('src' => 'images/crud_edit.png', 'alt' => '(edit)', 'class' => 'crud'))) . ' '; 
+			
+			$this->table->add_row($seminar->judul, $seminar->tahun, $seminar->seminar, $jenis, $crud_link);
+		}
+		echo $this->table->generate(); 
+	}
+	else
+	{
+		echo '<div class="info">' . "Belum ada karya ilmiah di seminar ditambahkan" . '</div>';
+	}
+	echo "<span class='button gray' onclick='show(" . '"seminar"' . ", $id)' >Tambahkan</span>";
+	echo "<div id='seminar_$id' class='form'>";
+	$this->load->view(ADM_URL . '/form_seminar_add', $data);
+	echo '</div>';
+	//---------------------------------------------------------------------------------------------
 
 	// list kegiatan
 	echo '<h2 id="kegiatan">' . 'Kegiatan Ilmiah' . '</h2>';

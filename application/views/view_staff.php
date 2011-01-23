@@ -152,16 +152,15 @@ $this->load->view('tpl_header', array('active' => 'staff', 'subtitle' => $dosen-
 		$publikasis = $this->Publikasi->get_where('dosen_id', $dosen->dosen_id, NULL, FALSE, 'tahun');
 		
 		$this->table->clear();
-		$this->table->set_heading('Judul Penelitian', 'Tahun', 'Posisi Penulis', 'Jurnal', 'Publikasi');
+		$this->table->set_heading('Judul Penelitian', 'Tahun', 'Posisi Penulis', 'Jurnal', 'Jenis');
 		foreach($publikasis as $publikasi)
 		{
-			$jenis = '-';
-			
-			$jenis = ($publikasi->jenis % 3 == 1) ? 'Karya Ilmiah di Jurnal Ilmiah Internasional' : $jenis;
-			$jenis = ($publikasi->jenis % 3 == 2) ? 'Karya Ilmiah di Jurnal Ilmiah Terakreditasi' : $jenis;
-			$jenis = ($publikasi->jenis % 3 == 0) ? 'Karya Ilmiah di Jurnal Ilmiah Tak Terakreditasi' : $jenis;
-			
+			$jenis = '-';			
+			$jenis = ($publikasi->jenis % 3 == 1) ? 'Jurnal Ilmiah Internasional' : $jenis;
+			$jenis = ($publikasi->jenis % 3 == 2) ? 'Jurnal Ilmiah Terakreditasi' : $jenis;
+			$jenis = ($publikasi->jenis % 3 == 0) ? 'Jurnal Ilmiah Tak Terakreditasi' : $jenis;
 			$jenis = ($publikasi->jenis == 0) ? '-' : $jenis;
+			
 			$this->table->add_row($publikasi->judul, $publikasi->tahun, $publikasi->posisi, $publikasi->media, $jenis);
 		}
 		echo $this->table->generate(); 

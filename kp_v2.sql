@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jan 23, 2011 at 05:38 PM
+-- Generation Time: Jan 23, 2011 at 06:29 PM
 -- Server version: 5.1.41
 -- PHP Version: 5.3.1
 
@@ -312,7 +312,7 @@ CREATE TABLE IF NOT EXISTS `penelitian` (
   `sumber` varchar(50) NOT NULL,
   `dana` varchar(30) NOT NULL,
   PRIMARY KEY (`penelitian_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
 
 --
 -- Dumping data for table `penelitian`
@@ -360,14 +360,15 @@ CREATE TABLE IF NOT EXISTS `publikasi` (
   `posisi` varchar(50) NOT NULL,
   `media` varchar(100) NOT NULL,
   PRIMARY KEY (`publikasi_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;
 
 --
 -- Dumping data for table `publikasi`
 --
 
 INSERT INTO `publikasi` (`publikasi_id`, `dosen_id`, `jenis`, `judul`, `tahun`, `posisi`, `media`) VALUES
-(1, 16, 2, 'Studi Perbandingan Warna Marker pada Tracking Gerak Tangan Berbasis Video', 2009, '', 'Jurnal Teknologi Vol. 2 No. 2 Desember 2009, ISSN 1979-3405');
+(1, 16, 2, 'Studi Perbandingan Warna Marker pada Tracking Gerak Tangan Berbasis Video', 2009, '', 'Jurnal Teknologi Vol. 2 No. 2 Desember 2009, ISSN 1979-3405'),
+(3, 16, 1, '(contoh) Penelitian di Jurnal Internasional', 2009, '', 'The Informatics Journal (contoh)');
 
 -- --------------------------------------------------------
 
@@ -383,7 +384,7 @@ CREATE TABLE IF NOT EXISTS `seminar` (
   `tahun` year(4) NOT NULL,
   `seminar` varchar(100) NOT NULL,
   PRIMARY KEY (`seminar_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=7 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=8 ;
 
 --
 -- Dumping data for table `seminar`
@@ -393,61 +394,8 @@ INSERT INTO `seminar` (`seminar_id`, `dosen_id`, `judul`, `jenis`, `tahun`, `sem
 (1, 16, 'Pengembangan Tempat Rekreasi Menggunakan Simulasi', 2, 2006, 'Seminar Nasional Aplikasi Teknologi Informasi'),
 (2, 16, 'Desain Konten E-Learning Untuk Mata Kuliah Grafika Komputer', 2, 2007, 'Seminar Nasional Ilmu Komputer Teknologi Informasi'),
 (3, 16, 'Desain Teknik Interaksi Berbasis Kamera untuk Video Game', 2, 2009, 'Seminar Nasional Teknologi Informasi dan Aplikasinya'),
-(6, 16, 'Tracking Ujung Jari Tangan pada Sekuen Video Untuk Pengenalan Gestur', 2, 2010, 'Konferensi Nasional Sistem Informasi');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `x_karya`
---
-
-CREATE TABLE IF NOT EXISTS `x_karya` (
-  `karya_id` int(11) NOT NULL AUTO_INCREMENT,
-  `judul` varchar(100) NOT NULL,
-  `tahun` year(4) NOT NULL,
-  `kategori_id` int(11) NOT NULL,
-  `deskripsi` text NOT NULL,
-  `dosen_id` int(11) NOT NULL,
-  PRIMARY KEY (`karya_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=17 ;
-
---
--- Dumping data for table `x_karya`
---
-
-INSERT INTO `x_karya` (`karya_id`, `judul`, `tahun`, `kategori_id`, `deskripsi`, `dosen_id`) VALUES
-(1, 'Pengaplikasian Green Computing ', 2009, 5, 'Lorem ipsum dolor sit amet.', 1),
-(2, 'Portofolio Dosen', 2010, 1, 'Apalah', 1),
-(16, 'Terserah', 2001, 1, '', 1),
-(14, 'Punya Herlin', 0000, 1, '', 5),
-(15, 'Sistem Informasi Manajemen Dokumen Mutu', 2010, 1, 'Bersama Rio Kiswandaru dan Faiz Kurniawan', 1);
-
--- --------------------------------------------------------
-
---
--- Table structure for table `x_kategori`
---
-
-CREATE TABLE IF NOT EXISTS `x_kategori` (
-  `kategori_id` int(11) NOT NULL AUTO_INCREMENT,
-  `nama_kat` varchar(50) NOT NULL,
-  PRIMARY KEY (`kategori_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=11 ;
-
---
--- Dumping data for table `x_kategori`
---
-
-INSERT INTO `x_kategori` (`kategori_id`, `nama_kat`) VALUES
-(1, 'Penelitian '),
-(2, 'Jurnal Ilmiah Nasional'),
-(4, 'Jurnal Ilmiah Internasional'),
-(5, 'Perancangan Sistem'),
-(6, 'Skripsi'),
-(7, 'Tesis'),
-(8, 'Disertasi'),
-(9, 'Kerja Praktek'),
-(10, 'Tugas Akhir');
+(6, 16, 'Tracking Ujung Jari Tangan pada Sekuen Video Untuk Pengenalan Gestur', 2, 2010, 'Konferensi Nasional Sistem Informasi'),
+(7, 16, '(contoh) Karya Ilmiah Bikin Sesuatu', 0, 2008, 'Seminar Balap Kerupuk');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
