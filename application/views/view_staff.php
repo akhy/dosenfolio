@@ -30,11 +30,16 @@ $this->load->view('tpl_header', array('active' => 'staff', 'subtitle' => $dosen-
 	
 	echo '<div class="data">';
 	$this->table->clear();
-	$this->table->add_row('Date of birth', ':', $dosen->kelahiran);
-	$this->table->add_row('Address', ':', $dosen->alamat);
-	$this->table->add_row('Phone number', ':', $dosen->telpon);
-	$this->table->add_row('Email address', ':', $emails);
-	$this->table->add_row('Homepage', ':', $homepages);
+	if ($dosen->kelahiran != '')
+		$this->table->add_row('Date of birth', ':', $dosen->kelahiran);
+	if ($dosen->alamat != '')
+		$this->table->add_row('Address', ':', $dosen->alamat);
+	if ($dosen->telpon != '')
+		$this->table->add_row('Phone number', ':', $dosen->telpon);
+	if ($dosen->email != '')
+		$this->table->add_row('Email address', ':', $emails);
+	if ($dosen->homepage != '')
+		$this->table->add_row('Homepage', ':', $homepages);
 	
 	$foto_url = $this->Foto->getFoto($dosen->dosen_id);
 	echo img(array('src' => $foto_url,

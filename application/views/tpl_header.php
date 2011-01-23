@@ -10,6 +10,7 @@
 <?php echo link_tag('js/tipTip.css', 'stylesheet'); ?>
 <!--[if IE]>
   <script src="<?php echo base_url(); ?>js/innershiv.min.js"></script>
+  <script src="<?php echo base_url(); ?>js/html5.js"></script>
 <![endif]-->
 <script language="javascript" type="text/javascript" src="<?php echo base_url(); ?>js/jquery.js"></script>
 <script language="javascript" type="text/javascript" src="<?php echo base_url(); ?>js/jquery.easing.js"></script>
