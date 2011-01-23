@@ -224,6 +224,13 @@ div#footer{
 	text-align: center;
 	font-size: 10px;
 }
+	div#footer a{
+		color: #666;
+		text-decoration: none;
+	}
+	div#footer a:hover{
+		color: #999;
+	}
 
 
 /*****************************************************************************************************/
