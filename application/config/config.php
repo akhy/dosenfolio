@@ -11,7 +11,7 @@
 |	http://example.com/
 |
 */
-$config['base_url']	= "http://localhost/dosen2";
+$config['base_url']	= "http://localhost/dosen";
 define('MY_URL', $config['base_url']);
 /*
 |--------------------------------------------------------------------------
